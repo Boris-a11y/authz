@@ -1,0 +1,11 @@
+<nav>
+    <div class="container">
+        <a href="register">Register</a>
+        <a href="login">Login</a>
+        <a href="dashboard">Dashboard</a>
+        <a href="profile">Profile</a>
+        <a href="logout">Logout</a>
+        <a href="admin" *ngIf="'manage' | able: 'all'">Admin stuff</a>
+        <a href="newpost" *ngIf="'create' | able: 'all'">New post</a>
+    </div>
+</nav>

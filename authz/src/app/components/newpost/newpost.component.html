@@ -1,0 +1,19 @@
+<div *ngIf="'create' | able: 'all'" class="admin">
+    <div>
+        <h3>This is the editor dashboard</h3>
+        <p>Only editors should be able to see this page</p>
+    </div>
+    <div>
+        <form action="" 
+        [formGroup]="postsForm"
+        (ngSubmit)="addPost()">
+            <small>Title</small>
+            <input type="text" name="title"formControlName="title">
+
+            <small>Description</small>
+            <input type="text" name="description" formControlName="description">
+
+            <button type="submit">Add post</button>
+        </form>
+    </div>
+</div>

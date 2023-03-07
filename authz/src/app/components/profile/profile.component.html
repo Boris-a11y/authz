@@ -1,0 +1,7 @@
+<p>Your profile</p>
+
+<ng-container *ngIf="currentUser" class="profile">
+    <h4>User: {{ currentUser.username }} </h4>
+    <h4>User role: {{ currentUser.role }}</h4>
+</ng-container>
+

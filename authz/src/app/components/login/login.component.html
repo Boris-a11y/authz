@@ -1,0 +1,21 @@
+<div class="login"> 
+    <form action="" [formGroup]="loginForm"> 
+        <small for="username">Username</small>
+        <br>
+        <input type="text" placeholder="Username" formControlName="username">
+
+        <br>
+        <small for="password">Password</small>
+        <br>
+        <input type="password" placeholder="Password" formControlName="password">
+        
+        <br>
+        <button 
+            (click)="login()" 
+            class="btn" 
+            [ngClass]="[loginForm.valid ? 'btn' : 'btn-disabled']"
+            [disabled]="!loginForm.valid" 
+            value="loginForm">Login
+        </button>
+    </form>
+</div>
